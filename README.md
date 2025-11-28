@@ -14,11 +14,11 @@ Set files (.set or .qset) are a simple, flexible format for storing configuratio
 ## Features
 
 - ✅ **Human readable and editable** - No quote escaping nightmares
+- ✅ **Flexible structure** - Mix key-value pairs, tables, and text blocks
 - ✅ **Simple parsing** - Split on delimiter, done
 - ✅ **Multi-line text** - Text blocks handle it naturally
 - ✅ **No type coercion issues** - Everything is explicit
 - ✅ **Comments supported** - Document your configuration
-- ✅ **Flexible structure** - Mix key-value pairs, tables, and text blocks
 
 ---
 
