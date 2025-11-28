@@ -1,0 +1,28 @@
+simple-config.set
+
+Basic application configuration
+Demonstrates key-value pairs and simple groups
+
+[DATABASE]
+Host|localhost
+Port|5432
+Database|myapp
+User|admin
+Password|changeme
+MaxConnections|100
+
+[APP_SETTINGS]
+AppName|My Application
+Version|1.0.0
+Theme|dark
+Language|en-US
+DebugMode|false
+
+[CACHE]
+Provider|redis
+Host|localhost
+Port|6379
+TTL|3600
+MaxMemory|256MB
+
+[EOF]

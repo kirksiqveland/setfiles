@@ -1,0 +1,29 @@
+database-records.set
+
+Employee database example
+Demonstrates tables with field definitions
+
+[EMPLOYEES]
+{id|first_name|last_name|department|hire_date|salary|email}
+101|Alice|Smith|Engineering|2023-01-15|95000|alice.smith@example.com
+102|Bob|Jones|Marketing|2023-02-20|75000|bob.jones@example.com
+103|Carol|White|Engineering|2023-03-10|98000|carol.white@example.com
+104|David|Brown|Sales|2023-04-05|82000|david.brown@example.com
+105|Eve|Davis|Engineering|2023-05-12|92000|eve.davis@example.com
+[EOG]
+
+[DEPARTMENTS]
+{id|name|manager|budget|location}
+1|Engineering|Alice Smith|500000|Building A
+2|Marketing|Bob Jones|250000|Building B
+3|Sales|David Brown|350000|Building C
+[EOG]
+
+[PROJECTS]
+{id|name|department_id|start_date|end_date|status}
+1|Website Redesign|2|2025-01-01|2025-06-30|active
+2|Mobile App|1|2025-02-01|2025-12-31|active
+3|Q4 Campaign|2|2025-10-01|2025-12-31|planning
+[EOG]
+
+[EOF]
