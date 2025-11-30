@@ -1905,7 +1905,9 @@ v3.x parsers **cannot** reliably read v4.0 files that use:
 **Questions or feedback?**  
 Visit: https://github.com/kirksiqveland/setfile
 
+---
+
 **License:**  
 Creative Commons Attribution 4.0 International (CC BY 4.0)  
-Copyright (c) 2025 Kirk B Siqveland
+Copyright (c) 2025 Kirk Siqveland
 
