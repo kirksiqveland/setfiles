@@ -1907,4 +1907,5 @@ Visit: https://github.com/kirksiqveland/setfile
 
 **License:**  
 Creative Commons Attribution 4.0 International (CC BY 4.0)  
-Copyright (c) 2025 Kirk Siqveland
+Copyright (c) 2025 Kirk B Siqveland
+
