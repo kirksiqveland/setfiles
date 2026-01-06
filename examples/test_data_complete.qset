@@ -1,0 +1,221 @@
+test_data_complete.qset
+
+Comprehensive QSet test file for parser implementations
+This file tests all core QSet features and common edge cases
+
+[METADATA]
+{key|value}
+version|4.2
+purpose|Parser validation and testing
+spec|QSet (simplified SET-File subset)
+
+[SIMPLE_KEYVALUE]
+Host|localhost
+Port|5432
+User|admin
+Password|secret123
+
+[TABLE_WITH_FIELDS]
+{id|username|email|active}
+1|alice|alice@example.com|true
+2|bob|bob@example.com|true
+3|charlie|charlie@example.com|false
+4|diana|diana@example.com|true
+
+[VARIABLE_FIELD_COUNT]
+protocol|rs232
+9600|8|n|1|none
+flow_control|rts/cts
+timeout|30
+
+[EMPTY_FIELDS]
+{col1|col2|col3|col4}
+a||c|d
+|b|c|
+a|b||d
+|||
+
+[TRAILING_EMPTY]
+{name|value1|value2|value3}
+first|a|b|c
+second|x||
+third|||
+
+[ESCAPED_PIPES]
+{key|value}
+Expression|value > 10 \| value < 5
+Path|C:\Windows\System32
+Mixed|normal\|pipe\|multiple
+Empty|\|
+
+[ESCAPED_BACKSLASH_PIPE]
+{description|data}
+BackslashPipe|test\ |data
+DoubleBackslash|path\\file
+SpacedPipe| value \| another |trimmed
+
+[NESTED_DELIMITERS]
+{id|label|subitems}
+1|File|New!Open!Save!Exit
+2|Edit|Cut!Copy!Paste
+3|View|Zoom!Fullscreen
+
+[SINGLE_VALUES]
+production
+staging
+development
+testing
+
+[WHITESPACE_HANDLING]
+{field1|field2|field3}
+  leading|  spaces  | trailing
+	tabs|	between	|	fields
+mixed  |  space 	| and	tabs
+
+[UNICODE_CONTENT]
+{name|city|greeting}
+François|Paris|Bonjour
+李明|北京|你好
+José|México|Hola
+
+[LONG_VALUES]
+{id|data}
+1|ThisIsAVeryLongValueWithNoSpacesThatGoesOnAndOnAndOnToTestLongLineHandling
+2|This is also a long value but with spaces so it can wrap naturally if needed in display
+3|Short
+
+[SPECIAL_CHARACTERS]
+{type|content}
+Quotes|He said "hello" to me
+Apostrophe|It's a beautiful day
+AtSymbol|email@example.com
+Hash|Use #hashtag for tags
+Percent|100% complete
+
+[{TEXT_GROUP_SIMPLE}]
+This is a simple text group.
+All content is preserved exactly as-is.
+No escaping needed for | pipes or \ backslashes.
+[EOG]
+
+[{TEXT_GROUP_MULTILINE}]
+# Markdown Example
+
+This text group contains markdown content.
+
+## Features
+- Bullet points
+- **Bold text**
+- *Italic text*
+
+Code block:
+```
+if (x > 5) {
+    return true;
+}
+```
+
+[GROUP] markers mid-line are literal text.
+[EOG]
+
+[{TEXT_GROUP_CODE}]
+function parseQSet(content) {
+    const lines = content.split('\n');
+    const groups = {};
+
+    for (let line of lines) {
+        // Process line with | delimiters
+        if (line.includes('|')) {
+            const fields = line.split('|');
+        }
+    }
+
+    return groups;
+}
+[EOG]
+
+[EMPTY_GROUP]
+
+[FIELD_DEF_ONLY]
+{id|name|status}
+
+[SINGLE_ROW]
+{alpha|beta|gamma}
+one|two|three
+
+[MANY_ROWS]
+{index|value}
+1|first
+2|second
+3|third
+4|fourth
+5|fifth
+6|sixth
+7|seventh
+8|eighth
+9|ninth
+10|tenth
+
+[FIELD_NAME_VARIATIONS]
+{simple|with_underscore|with-dash|CamelCase|number123}
+a|b|c|d|e
+
+[COMPLEX_TABLE]
+{id|type|name|price|quantity|total|notes}
+101|widget|Red Widget|19.99|5|99.95|In stock
+102|gadget|Blue Gadget|29.99|0|0.00|Backordered
+103|tool|Green Tool|9.99|100|999.00|Bulk available
+104|part|Yellow Part|4.50|25|112.50|
+
+[DUPLICATE_VALUES]
+{id|status|category}
+1|active|A
+2|active|B
+3|inactive|A
+4|active|A
+
+[NUMERIC_DATA]
+{integer|decimal|negative|scientific}
+42|3.14159|-17|1.5e10
+0|0.0|0|0.0
+999999|99.99|-99.99|9.9e-5
+
+[BOOLEAN_LIKE]
+{id|flag1|flag2|flag3}
+1|true|yes|1
+2|false|no|0
+3|TRUE|YES|Y
+4|FALSE|NO|N
+
+[{SPECIAL_CONTENT}]
+Special characters in text groups:
+
+Pipes: | | | | |
+Backslashes: \ \ \ \ \
+Brackets: [[ ]] {{ }}
+Symbols: @#$%^&*()
+
+Even things like [EOG] mid-line are literal.
+Only [EOG] at start of line ends the group.
+    [EOG] with leading whitespace is also literal.
+[EOG]
+
+[MIXED_LINE_LENGTHS]
+{data}
+x
+short
+medium length value
+this is a much longer value that contains more text
+tiny
+
+[BOUNDARY_CASES]
+{test|result}
+FirstRow|FirstValue
+LastRow|LastValue
+
+[{EMPTY_TEXT_GROUP}]
+[EOG]
+
+[FINAL_GROUP]
+complete|true
+tested|yes

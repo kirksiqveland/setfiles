@@ -3,7 +3,7 @@
 **Human-readable files for settings, configuration and data storage**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Version](https://img.shields.io/badge/version-4.0-blue.svg)](https://setfiles.org)
+[![Version](https://img.shields.io/badge/version-4.2-blue.svg)](https://setfiles.org)
 
 Set files (.set or .qset) are a simple, flexible format for storing configuration data, settings, and structured information.
 
@@ -13,12 +13,12 @@ Set files (.set or .qset) are a simple, flexible format for storing configuratio
 
 ## Features
 
-- ✅ **Human readable and editable** - No quote escaping nightmares
-- ✅ **Flexible structure** - Mix key-value pairs, tables, and text blocks
-- ✅ **Simple parsing** - Split on delimiter, done
-- ✅ **Multi-line text** - Text blocks handle it naturally
-- ✅ **No type coercion issues** - Everything is explicit
-- ✅ **Comments supported** - Document your configuration
+* ✅ **Human readable and editable** - No quote escaping nightmares
+* ✅ **Flexible structure** - Mix key-value pairs, tables, and text blocks
+* ✅ **Simple parsing** - Split on delimiter, done
+* ✅ **Multi-line text** - Text blocks handle it naturally
+* ✅ **No type coercion issues** - Everything is explicit
+* ✅ **Comments supported** - Document your configuration
 
 ---
 
@@ -62,10 +62,10 @@ Get started by configuring your settings above.
 
 ### Documentation
 
-- 📘 **[Specification](docs/SetFile_Spec_v4_0.md)** - Complete format definition
-- 📗 **[Implementation Guide](docs/SetFile_ImplementationGuide_v4_0.md)** - Build parsers and use advanced features
-- 🚀 **[Quick Start](docs/SetFile_QuickStart.md)** - Learn in 5 minutes
-- 📋 **[Examples](examples/)** - See Set files in action
+* 📘 **[Specification](docs/v4.2/)** - Complete format definition
+* 📗 **[Implementation Guide](docs/v4.2/)** - Build parsers and use advanced features
+* 🚀 **[Quick Start](docs/v4.2/)** - Learn in 5 minutes
+* 📋 **[Examples](examples/)** - See Set files in action
 
 ### Website
 
@@ -82,12 +82,14 @@ No installation needed! Set files are plain text. Use any text editor.
 ### For Developers (Parsing Set Files)
 
 **JavaScript/Node.js:**
-```bash
+
+```
 npm install setfile
 ```
 
 **Python:**
-```bash
+
+```
 pip install setfile
 ```
 
@@ -100,14 +102,15 @@ pip install setfile
 ```
 setfile/
 ├── docs/                          # Documentation
-│   ├── SetFile_Spec_v4_0.md
-│   ├── SetFile_ImplementationGuide_v4_0.md
-│   └── SetFile_QuickStart.md
+│   ├── v4.2/                      # Current version
+│   ├── v4.0/                      # Archived version
+│   └── README.md
 ├── examples/                      # Example Set files
 │   ├── simple-config.set
 │   ├── database-records.set
-│   ├── multilingual.set
-│   └── README.md
+│   ├── test_data_complete.qset
+│   ├── README.md
+│   └── Examples.md
 ├── implementations/               # Parser libraries
 │   ├── javascript/
 │   ├── python/
@@ -162,27 +165,31 @@ Field|Value
 ## Why Set Files?
 
 ### vs. JSON
-- No quote escaping hell
-- Natural multi-line text
-- Comments supported
-- Human-editable without breaking syntax
+
+* No quote escaping hell
+* Natural multi-line text
+* Comments supported
+* Human-editable without breaking syntax
 
 ### vs. YAML
-- Simpler spec with fewer edge cases
-- More predictable parsing
-- No indentation sensitivity
+
+* Simpler spec with fewer edge cases
+* More predictable parsing
+* No indentation sensitivity
 
 ### vs. CSV
-- Multiple data sets in one file
-- Comments and documentation
-- Text blocks for descriptions
-- Mixed data types
+
+* Multiple data sets in one file
+* Comments and documentation
+* Text blocks for descriptions
+* Mixed data types
 
 ### vs. INI
-- Structured data support
-- Tables with field definitions
-- Proper text block handling
-- More flexible
+
+* Structured data support
+* Tables with field definitions
+* Proper text block handling
+* More flexible
 
 ---
 
@@ -191,34 +198,35 @@ Field|Value
 We welcome contributions! See [Contributing Guidelines](CONTRIBUTING.md).
 
 Ways to contribute:
-- **Parser implementations** in new languages
-- **Example files** and use cases
-- **Documentation improvements**
-- **Bug reports** and feature requests
+
+* **Parser implementations** in new languages
+* **Example files** and use cases
+* **Documentation improvements**
+* **Bug reports** and feature requests
 
 ---
 
 ## Community
 
-- **Website:** [setfiles.org](https://setfiles.org)
-- **Discussions:** [GitHub Discussions](https://github.com/kirksiqveland/setfile/discussions)
-- **Issues:** [GitHub Issues](https://github.com/kirksiqveland/setfile/issues)
-- **Contact:** kirk@setfiles.org
+* **Website:** [setfiles.org](https://setfiles.org)
+* **Discussions:** [GitHub Discussions](https://github.com/kirksiqveland/setfile/discussions)
+* **Issues:** [GitHub Issues](https://github.com/kirksiqveland/setfile/issues)
+* **Contact:** [kirk@setfiles.org](mailto:kirk@setfiles.org)
 
 ---
 
 ## Version
 
-**Current Version:** 4.0 (November 2025)
+**Current Version:** 4.2 (January 2026)
 
-### What's New in v4.0
+### Recent Changes
 
-- Removed mandatory preamble → Use optional `[THIS-FILE]` group
-- Simplified escape sequences → Only `\|` needed
-- Better organization → Spec separated from implementation guide
-- UTF-8 direct input emphasized
+Version 4.2 includes refinements and clarifications to the specification, improved documentation, and enhanced parser implementations.
 
-[See version history →](docs/SetFile_Spec_v4_0.md#version-history)
+[See full version history in the specification →](docs/v4.2/)
+
+**Previous versions:**
+* [v4.0](docs/v4.0/) - November 2025
 
 ---
 
@@ -229,9 +237,10 @@ Ways to contribute:
 **Copyright © 2025 Kirk Siqveland**
 
 You are free to:
-- Share and adapt the material for any purpose
-- Create your own parsers and implementations
-- Use Set files commercially or non-commercially
+
+* Share and adapt the material for any purpose
+* Create your own parsers and implementations
+* Use Set files commercially or non-commercially
 
 Just provide appropriate attribution.
 
@@ -247,11 +256,4 @@ Special thanks to all [contributors](https://github.com/kirksiqveland/setfile/gr
 
 ---
 
-## Related Projects
-
-- **[EMU Protocols](https://emucode.org)** - Embedded MarkUp tools
-- **[Aikode](https://aikode.org)** - Development projects
-
----
-
-**[Get Started →](https://setfiles.org/Main/QuickStart)** | **[Read the Spec →](docs/SetFile_Spec_v4_0.md)** | **[See Examples →](examples/)**
+**[Get Started →](https://setfiles.org/Main/QuickStart)** | **[Read the Spec →](docs/v4.2/)** | **[See Examples →](examples/)**
