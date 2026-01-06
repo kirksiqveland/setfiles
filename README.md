@@ -7,7 +7,7 @@
 
 Set files (.set or .qset) are a simple, flexible format for storing configuration data, settings, and structured information.
 
-**Think:** CSV meets INI files, but all grown up and actually readable.
+Human-readable data and configuration files - without the escaping, quoting, and indentation nightmares. Finally, configs that are easy to edit.
 
 ---
 
