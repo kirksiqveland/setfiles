@@ -7,7 +7,7 @@
 
 Set files (.set or .qset) are a simple, flexible format for storing configuration data, settings, and structured information.
 
-Human-readable data and configuration files - without the escaping, quoting, and indentation nightmares. Finally, configs that are easy to edit.
+Human-readable data and configuration files - without the escaping, quoting, and indentation nightmares of JSON or YAML. Finally, configs that are easy to edit.
 
 ---
 
